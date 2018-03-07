@@ -8,20 +8,7 @@ $(document).ready ( () => {
 
   fetch( urlCall )
     .then( results => results.json() )//Asegurando que la respuesta este en estructura JSON.
-    .then( data => showHourly(data) )
+    .then( data => currentData(data) )
     .catch( error => console.error( 'Oooops!' ) );
 
 });
-
-let showHourly = object => {
-  let hourly = object.hourly;
-  console.log(hourly);
-  let iconDay = hourly.icon;
-  let latitude = object.latitude;
-  console.log(latitude);
-  //las próximas varables son arreglos.
-  let temperature = hourly.data.temperature;//temperature es un array.
-  let windSpeed = hourly.data.windSpeed;
-  let uvIndex = hourly.uvIndex;
-  let pressure = hourly.pressure;
-}
