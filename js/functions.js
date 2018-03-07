@@ -7,8 +7,9 @@ let currentData = object => {
   let windSpeed = currently.windSpeed;
   let humidity = currently.humidity;
 
-   let templateCurrent =  `
-  <div>Icon ${iconDay}</div>
+console.log(iconDay);
+partly-cloudy-day
+   let templateCurrent =  ` <img src="#">
   <h3>${temperature}°</h3>
   <h4>Wind ${windSpeed} m/s</h4>
   <h4>Humidity ${humidity} %</h4>
